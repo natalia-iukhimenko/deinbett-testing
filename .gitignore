@@ -1,0 +1,12 @@
+# IntelliJ
+/.idea/
+*.iml
+*.iws
+
+# Cypress
+/cypress/screenshots/
+/cypress/reports/html/
+/cypress/videos/
+
+# Node
+/node_modules
