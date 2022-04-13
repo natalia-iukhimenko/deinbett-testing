@@ -1,0 +1,7 @@
+{
+  "allowedGender": [
+    "male",
+    "female"
+  ],
+  "zipcode": 12345
+}
