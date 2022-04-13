@@ -35,6 +35,10 @@ And('user registered with randomly generated data', () => {
     registrationPage.confirmRegistration();
 })
 
+Then('user is logged in', () => {
+    brandHeader.loginLinkDescription.should('have.text', 'Dein Konto');
+})
+
 function login(email, password) {
     cy.openMainPage();
     brandHeader.openLoginPage();
