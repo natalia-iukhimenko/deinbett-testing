@@ -27,7 +27,7 @@ And('user registered with randomly generated data', () => {
         registrationPage.selectSalutation(gender)
             .fillFirstName(faker.name.firstName(gender))
             .fillLastName(faker.name.lastName(gender))
-            .fillEmail(faker.internet.email())
+            .fillEmail(faker.internet.exampleEmail())
             .fillPassword(password)
             .fillPasswordConfirmation(password)
             .checkAgbCheckbox();
@@ -36,7 +36,7 @@ And('user registered with randomly generated data', () => {
 })
 
 Then('user is logged in', () => {
-    brandHeader.loginLinkDescription.should('have.text', 'Dein Konto');
+    brandHeader.checkUserAccountIconDisplayed();
 })
 
 function login(email, password) {

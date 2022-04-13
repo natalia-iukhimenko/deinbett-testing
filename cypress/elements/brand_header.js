@@ -28,6 +28,7 @@ class BrandHeader {
     }
 
     openUserAccountPage() {
+        this.checkUserAccountIconDisplayed();
         this.openLoginPage();
     }
 
@@ -37,6 +38,12 @@ class BrandHeader {
 
     openCart() {
         this.cartLink.click({force: true});
+    }
+
+    checkUserAccountIconDisplayed() {
+        this.loginLinkDescription.should('have.text', 'Dein Konto');
+        this.loginLink.invoke('attr', 'href')
+            .should('equal', '/kundenkonto');
     }
 }
 
