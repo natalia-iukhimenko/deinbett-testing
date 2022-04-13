@@ -1,5 +1,9 @@
 {
   "baseUrl": "https://www.deinbett.de",
   "integrationFolder": "cypress/tests",
-  "testFiles": "**/*.{feature, features}"
+  "testFiles": "**/*.{feature, features}",
+  "env": {
+    "email": "virgilking_tester@testdeinbett.com",
+    "password": "mG1TRy4AP_"
+  }
 }
