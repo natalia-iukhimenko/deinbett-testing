@@ -1,16 +1,15 @@
 import BeddingFlyoutMenu from "./flyoutMenu/bedding_flyout_menu";
 
 class NavigationMenu {
-    get menuItems() {
-        return cy.xpath('//a[contains(@class, "menu__linkHref")]');
-    }
-
-    openMenuItem(name) {
-        this.menuItems.contains(name).click();
+    openMenuItem(link) {
+        cy.wait(1000);
+        cy.get(`.menu__linkHref[href = '${link}']`)
+            .should('exist')
+            .click();
     }
 
     openBeddingMenu() {
-        this.openMenuItem('Bettwaren');
+        this.openMenuItem('/bettwaren-bettdekoration');
         return new BeddingFlyoutMenu();
     }
 }
