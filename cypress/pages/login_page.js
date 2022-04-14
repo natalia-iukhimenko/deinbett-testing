@@ -23,10 +23,22 @@ class LoginPage {
         this.registerButton.click();
     }
 
-    doLogin(email, password) {
+    enterEmail(email) {
         this.emailInput.type(email);
+    }
+
+    enterPassword(password) {
         this.passwordInput.type(password);
+    }
+
+    confirmLogin() {
         this.loginButton.click();
+    }
+
+    doLogin(email, password) {
+        this.enterEmail(email);
+        this.enterPassword(password);
+        this.confirmLogin();
     }
 
     openForgotPasswordPage() {

@@ -6,6 +6,10 @@ import registrationPage from "../../pages/registration_page";
 
 const {faker} = require('@faker-js/faker');
 
+Given('user opened login page', () => {
+    openLoginPage();
+})
+
 Given('user logged in the system with {string}, {string}', (email, password) => {
     login(email, password);
 })
@@ -40,7 +44,11 @@ Then('user is logged in', () => {
 })
 
 function login(email, password) {
+    openLoginPage();
+    loginPage.doLogin(email, password);
+}
+
+function openLoginPage() {
     cy.openMainPage();
     brandHeader.openLoginPage();
-    loginPage.doLogin(email, password);
 }
