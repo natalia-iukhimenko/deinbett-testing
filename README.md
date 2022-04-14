@@ -14,19 +14,31 @@ git clone https://github.com/natalia-iukhimenko/deinbett-testing.git
 node -v
 ```
 
-3. Navigate to 'deinbett-testing' directory and execute the following command to run tests:
+3. Install Node packages:
+
+```sh
+npm install
+```
+
+4. Install Allure Reporting
+
+```sh
+npm install -g allure-commandline --save-dev
+```
+
+5. Navigate to 'deinbett-testing' directory and execute the following command to run tests:
 
 ```sh
 npm run cy:run
 ```
 
-4. To generate test report, execute:
+6. To generate test report, execute:
 
 ```sh
 npm run allure:generate
 ```
 
-5. To open generated report:
+7. To open generated report:
 
 ```sh
 npm run report:open
