@@ -4,6 +4,7 @@
   "testFiles": "**/*.{feature, features}",
   "env": {
     "email": "virgilking_tester@testdeinbett.com",
-    "password": "mG1TRy4AP_"
+    "password": "mG1TRy4AP_",
+    "allureResultsPath": "allure-results"
   }
 }
