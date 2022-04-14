@@ -19,6 +19,10 @@ class LoginPage {
         return cy.get('.existingAccount__forgotten');
     }
 
+    get emailErrorElement() {
+        return cy.get('#loginEmail-error');
+    }
+
     openRegistrationPage() {
         this.registerButton.click();
     }
